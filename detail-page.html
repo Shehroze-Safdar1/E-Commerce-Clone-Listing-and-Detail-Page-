@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Fav Icon -->
+    <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Shopify-256.png" type="image/gif" sizes="16x16">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>E-Commerce-Store - Product Details</title>
+
+    <style>
+        body {
+            font-family: 'Abel', sans-serif;
+            background-color: rgb(255, 239, 239);
+        }
+
+        h1, h2, h3 {
+            margin: 20px 0;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 700;
+            margin-right: 20px;
+            color: #007bff; /* Link color matching listing page */
+        }
+
+        .navbar-brand img {
+            max-width: 120px; /* Set logo width to match listing page */
+            height: auto;
+        }
+
+        .product-detail {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-detail img {
+            max-width: 100%; /* Make the image responsive */
+            max-height: 300px; /* Set a maximum height */
+            object-fit: contain; /* Ensure the image fits within the box without cropping */
+            border-radius: 8px;
+        }
+
+        .price {
+            font-size: 1.5em;
+            color: #e67e22;
+            margin: 10px 0;
+        }
+
+        ul.product-specs {
+            list-style-type: square;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #f8f8f8;
+            margin-top: 40px;
+        }
+
+        .btn-add-cart {
+            background-color: #28a745; /* Green */
+            color: white;
+            font-weight: bold;
+            border: none;
+        }
+
+        .btn-add-cart:hover {
+            background-color: #218838; /* Darker green */
+        }
+
+        .review-section {
+            margin-top: 40px;
+        }
+
+        .related-products {
+            margin-top: 40px;
+        }
+
+        .related-products h3 {
+            margin-bottom: 20px;
+        }
+
+        /* Media query for responsive design */
+        @media (max-width: 768px) {
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fill">
+            <a class="navbar-brand" href="#"><img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Shopify-256.png" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="listing-page.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Product</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <!-- MacBook Detail -->
+        <div class="product-detail" id="macbook">
+            <h2>MacBook</h2>
+            <img src="https://png.pngitem.com/pimgs/s/669-6692570_apple-macbook-pro-16-space-grey-hd-png.png" alt="MacBook">
+            <p class="price">$1,299</p>
+            <p>The MacBook is a line of Macintosh laptop computers designed by Apple Inc., known for its sleek design and powerful performance.</p>
+            <ul class="product-specs">
+                <li><strong>Specifications:</strong> 16GB RAM, 512GB SSD, Retina Display</li>
+                <li><strong>Colors:</strong> Silver, Space Gray</li>
+                <li><strong>Weight:</strong> 4.3 lbs</li>
+                <li><strong>Battery Life:</strong> Up to 20 hours</li>
+            </ul>
+            <button class="btn btn-add-cart">Add to Cart</button>
+        </div>
+
+        <!-- Alexa Detail -->
+        <div class="product-detail" id="alexa">
+            <h2>Alexa</h2>
+            <img src="https://png.pngitem.com/pimgs/s/298-2985125_amazon-echo-dot-3rd-generation-hd-png-download.png" alt="Alexa">
+            <p class="price">$99</p>
+            <p>Amazon Alexa is a virtual assistant developed by Amazon, used in devices like the Echo for voice interaction, music playback, and smart home control.</p>
+            <ul class="product-specs">
+                <li><strong>Features:</strong> Voice Control, Smart Home Integration, Music Streaming</li>
+                <li><strong>Connectivity:</strong> Wi-Fi, Bluetooth</li>
+                <li><strong>Color Options:</strong> Charcoal, Heather Gray</li>
+            </ul>
+            <button class="btn btn-add-cart">Add to Cart</button>
+        </div>
+
+        <!-- PS4 Controller Detail -->
+        <div class="product-detail" id="ps4-controller">
+            <h2>PS4 Controller</h2>
+            <img src="https://png.pngitem.com/pimgs/s/565-5659807_playstation-4-controller-png-ps4-dualshock-controller-red.png" alt="PS4 Controller">
+            <p class="price">$69.99</p>
+            <p>The PS4 Controller specializes in delivering a smooth and efficient gaming experience, perfect for online and single-player games.</p>
+            <ul class="product-specs">
+                <li><strong>Compatibility:</strong> PS4, PC, Android</li>
+                <li><strong>Colors:</strong> Black, Red</li>
+                <li><strong>Battery Life:</strong> 7-8 hours</li>
+            </ul>
+            <button class="btn btn-add-cart">Add to Cart</button>
+        </div>
+
+        <!-- iPhone Detail -->
+        <div class="product-detail" id="iphone">
+            <h2>iPhone</h2>
+            <img src="https://png.pngitem.com/pimgs/s/145-1453180_iphone-11-pro-space-grey-hd-png-download.png" alt="iPhone">
+            <p class="price">$999</p>
+            <p>The iPhone 11 Pro combines cutting-edge technology and a sleek design for an unparalleled smartphone experience.</p>
+            <ul class="product-specs">
+                <li><strong>Specifications:</strong> A15 Bionic chip, 5G capable, Dual-camera system</li>
+                <li><strong>Colors:</strong> Black, White, Red</li>
+                <li><strong>Display:</strong> Super Retina XDR</li>
+            </ul>
+            <button class="btn btn-add-cart">Add to Cart</button>
+        </div>
+
+        <!-- Samsung Galaxy Detail -->
+        <div class="product-detail" id="samsung-galaxy">
+            <h2>Samsung Galaxy</h2>
+            <img src="https://png.pngitem.com/pimgs/s/508-5089110_samsung-aura-glow-galaxy-note-10-hd-png.png" alt="Samsung Galaxy">
+            <p class="price">$799</p>
+            <p>The Samsung Galaxy series offers high-end smartphones with advanced features and cutting-edge technology.</p>
+            <ul class="product-specs">
+                <li><strong>Specifications:</strong> 8GB RAM, 128GB Storage, AMOLED Display</li>
+                <li><strong>Colors:</strong> Phantom Black, Phantom Silver</li>
+                <li><strong>Camera:</strong> Triple-camera system</li>
+            </ul>
+            <button class="btn btn-add-cart">Add to Cart</button>
+        </div>
+
+        <!-- Redmi Detail -->
+        <div class="product-detail" id="redmi">
+            <h2>Redmi</h2>
+            <img src="https://png.pngitem.com/pimgs/s/580-5805301_google-pixel-2-google-pixel-2-price-google.png" alt="Redmi">
+            <p class="price">$199</p>
+            <p>The Redmi series offers budget-friendly smartphones with good performance and high-quality features.</p>
+            <ul class="product-specs">
+                <li><strong>Specifications:</strong> 4GB RAM, 64GB Storage, Dual-camera system</li>
+                <li><strong>Colors:</strong> Blue, Black</li>
+            </ul>
+            <button class="btn btn-add-cart">Add to Cart</button>
+        </div>
+
+        <!-- Asus Detail -->
+        <div class="product-detail" id="asus">
+            <h2>Asus</h2>
+            <img src="https://png.pngitem.com/pimgs/s/575-5752617_asus-vivobook-14-k403fa-hd-png-download.png" alt="Asus">
+            <p class="price">$899</p>
+            <p>Asus is renowned for its laptops, desktops, and components, offering powerful performance and reliability.</p>
+            <ul class="product-specs">
+                <li><strong>Specifications:</strong> Intel i7, 16GB RAM, 1TB SSD</li>
+                <li><strong>Display:</strong> 14-inch Full HD</li>
+                <li><strong>Weight:</strong> 3.5 lbs</li>
+            </ul>
+            <button class="btn btn-add-cart">Add to Cart</button>
+        </div>
+
+        <!-- Acer Detail -->
+        <div class="product-detail" id="acer">
+            <h2>Acer</h2>
+            <img src="https://png.pngitem.com/pimgs/s/247-2475845_acer-aspire-es1-511-intel-celeron-2gb-ram.png" alt="Acer">
+            <p class="price">$1,499</p>
+            <p>Acer specializes in hardware, including laptops and accessories designed for gaming and high-performance tasks.</p>
+            <ul class="product-specs">
+                <li><strong>Specifications:</strong> Acer Pro 15, Intel i7, 16GB RAM, RTX 3070</li>
+                <li><strong>Display:</strong> 15.6-inch 4K UHD</li>
+                <li><strong>Battery Life:</strong> Up to 10 hours</li>
+            </ul>
+            <button class="btn btn-add-cart">Add to Cart</button>
+        </div>
+
+        <!-- HP Pavilion Detail -->
+        <div class="product-detail" id="hp">
+            <h2>HP Pavilion</h2>
+            <img src="https://png.pngitem.com/pimgs/s/186-1860694_clipart-hand-reaching-out-of-computer-screen-for.png" alt="HP Pavilion">
+            <p class="price">$399</p>
+            <p>The HP Pavilion series is designed for casual computing, gaming, and productivity, providing a balance of performance and style.</p>
+            <ul class="product-specs">
+                <li><strong>Specifications:</strong> 6GB RAM, 128GB Storage, 108MP Camera</li>
+                <li><strong>Colors:</strong> White, Black</li>
+                <li><strong>Weight:</strong> 4.0 lbs</li>
+            </ul>
+            <button class="btn btn-add-cart">Add to Cart</button>
+        </div>
+
+        <!-- Review Section -->
+        <div class="review-section">
+            <h3>Customer Reviews</h3>
+            <p><strong>Huzaifa Umer:</strong> "The MacBook is fantastic! Highly recommend it for anyone needing a reliable laptop."</p>
+            <p><strong>Asad Nadeem:</strong> "I love my Alexa! It makes my life so much easier!"</p>
+        </div>
+
+        <!-- Related Products Section -->
+        <div class="related-products">
+            <h3>Related Products</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="product-detail">
+                        <h4>iPad</h4>
+                        <img src="https://png.pngitem.com/pimgs/s/76-762490_apple-ipad-pro-ipad-pro-space-grey-9-7.png" alt="iPad">
+                        <p class="price">$799</p>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-detail">
+                        <h4>Samsung Tablet</h4>
+                        <img src="https://png.pngitem.com/pimgs/s/1-15749_samsung-sm-t800-hd-png-download.png" alt="Samsung Tablet">
+                        <p class="price">$649</p>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-detail">
+                        <h4>Google Nest Hub</h4>
+                        <img src="https://png.pngitem.com/pimgs/s/540-5401148_nest-cam-indoor-security-camera-google-nest-cam.png" alt="Google Nest Hub">
+                        <p class="price">$99</p>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-detail">
+                        <h4>Apple Watch</h4>
+                        <img src="https://png.pngitem.com/pimgs/s/134-1341486_double-tour-orange-craie-indigo-capecod-12-apple.png" alt="Apple Watch">
+                        <p class="price">$399</p>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer start  -->
+    <footer>
+        <div class="text-center">
+            <strong>Muhammad Shahroze </strong> &copy; All Right reserved
+        </div>
+    </footer>
+    <!-- End  -->
+
+</body>
+</html>

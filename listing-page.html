@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Fav Icon -->
+    <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Shopify-256.png" type="image/gif" sizes="16x16">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>E-Commerce-Store</title>
+
+    <style>
+        body {
+            font-family: 'Abel', sans-serif;
+            font-size: large;
+            background-color: #f8f9fa; /* Light background color */
+        }
+
+        h1, h2, h3, h4, h5, h6, p {
+            cursor: pointer;
+        }
+
+        /* Header nav start */
+        a.nav-link {
+            margin-right: 20px;
+            font-weight: 700;
+            color: #007bff; /* Bootstrap primary color */
+        }
+
+        a.nav-link:hover {
+            color: #0056b3; /* Darker shade on hover */
+        }
+
+        .navbar-light .navbar-nav .active > .nav-link:hover {
+            color: #ffffff;
+        }
+
+        nav.fill ul li a.nav-link {
+            transition: all .5s;
+        }
+
+        nav.fill ul li a.nav-link:after {
+            text-align: left;
+            content: '.';
+            margin: 0;
+            opacity: 0;
+        }
+
+        nav.fill ul li a.nav-link:hover {
+            color: white;
+            z-index: 1;
+        }
+
+        nav.fill ul li a.nav-link:hover:after {
+            z-index: -10;
+            animation: fill 1s forwards;
+            opacity: 1;
+        }
+
+        nav.fill ul li a.nav-link {
+            position: relative;
+        }
+
+        nav.fill ul li a.nav-link:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0%;
+            content: '.';
+            color: transparent;
+            background: #aaa;
+            height: 1px;
+        }
+
+        .navbar-brand img {
+            max-width: 120px; /* Set logo width smaller */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Section Mack book start */
+        section#mack-book {
+            margin-bottom: 100px;
+        }
+
+        .carousel-indicators li {
+            width: 20px;
+            height: 8px;
+            border: none;
+            border-radius: 4px;
+            background-color: #CECECE;
+        }
+
+        .carousel-indicators li.active {
+            width: 35px;
+            height: 10px;
+            border-radius: 8px;
+            background-image: linear-gradient(145deg, #f1c40f, #e67e22);
+        }
+
+        .mack {
+            padding: 10% 4%;
+        }
+
+        .mack p {
+            margin-bottom: 30px;
+        }
+
+        .mack a.mack-btn {
+            font-weight: bold;
+            background-color: #007bff; /* Primary color */
+            color: white;
+            border: 2px solid #007bff; /* Match the background */
+            padding: 15px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        .mack a.mack-btn:hover {
+            background-color: white;
+            color: #007bff; /* Primary color */
+        }
+
+        svg.bi.bi-arrow-right {
+            color: white;
+            font-size: 20px;
+            transition: .5s;
+        }
+
+        a.mack-btn:hover svg.bi.bi-arrow-right {
+            transform: rotate(-180deg);
+            color: black;
+        }
+
+        /* Section Smartphone start */
+        section#smartphone {
+            margin-bottom: 100px;
+        }
+
+        .smartphone-header {
+            margin-bottom: 50px;
+        }
+
+        .smartphone-header h5 {
+            font-weight: bold;
+            cursor: pointer;
+            background: linear-gradient(145deg, #f1c40f, #e67e22);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+
+        a.smartphone-btn {
+            font-weight: bold;
+            background-color: #007bff;
+            color: white;
+            border: 2px solid #007bff;
+            padding: 15px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        a.smartphone-btn:hover {
+            background-color: white;
+            color: #007bff; /* Primary color */
+        }
+
+        a.smartphone-btn:hover svg.bi.bi-arrow-right {
+            transform: rotate(-180deg);
+            color: black;
+        }
+
+        /* Section Laptop start */
+        section#laptop {
+            margin-bottom: 100px;
+        }
+
+        .laptop-header {
+            margin-bottom: 50px;
+        }
+
+        .laptop-header h5 {
+            font-weight: bold;
+            cursor: pointer;
+            background: linear-gradient(145deg, #f1c40f, #e67e22);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+
+        a.laptop-btn {
+            font-weight: bold;
+            background-color: #007bff;
+            color: white;
+            border: 2px solid #007bff;
+            padding: 15px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        a.laptop-btn:hover {
+            background-color: white;
+            color: #007bff; /* Primary color */
+        }
+
+        a.laptop-btn:hover svg.bi.bi-arrow-right {
+            transform: rotate(-180deg);
+            color: black;
+        }
+
+        /* Categories start */
+        hr {
+            width: 130px;
+            background-image: linear-gradient(145deg, #f1c40f, #e67e22);
+            height: 10px;
+            border: none;
+            border-radius: 50px;
+            margin-bottom: 50px;
+        }
+
+        .categories-card {
+            box-shadow: 0px 5px 15px gray;
+            padding: 5%;
+        }
+
+        .mt-5 {
+            margin-top: 6rem !important;
+        }
+
+        /* Footer */
+        footer {
+            padding: 5%;
+        }
+
+        /* Nav animation */
+        @keyframes fill {
+            0% {
+                width: 0%;
+                height: 1px;
+            }
+
+            50% {
+                width: 100%;
+                height: 1px;
+            }
+
+            100% {
+                width: 100%;
+                height: 100%;
+                background: #333;
+            }
+        }
+
+        .card img {
+            width: 100%;  /* Full width inside the card */
+            height: auto;  /* Ensure image scales properly without cropping */
+            max-height: 250px;  /* Set a maximum height for uniformity */
+            object-fit: contain;  /* Prevent cropping */
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <!-- Header start  -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light fill">
+                <a class="navbar-brand" href="#"><img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Shopify-256.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Product</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Header end  -->
+
+        <!-- Mack book pro start -->
+        <section id="mack-book">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-6 mack">
+                                <h1>MackBook Pro</h1>
+                                <p>Experience the power of the new MacBook Pro with M1 chip.</p>
+                                <a class="mack-btn" href="detail-page.html">Buy Now
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
+                                        <path fill-rule="evenodd"
+                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="https://png.pngitem.com/pimgs/s/669-6692570_apple-macbook-pro-16-space-grey-hd-png.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6 mack">
+                                <h1>Alexa</h1>
+                                <p>Control your smart home with the new Alexa device.</p>
+                                <a class="mack-btn" href="detail-page.html">Buy Now
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
+                                        <path fill-rule="evenodd"
+                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="https://png.pngitem.com/pimgs/s/298-2985125_amazon-echo-dot-3rd-generation-hd-png-download.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6 mack">
+                                <h1>PS4 Controller</h1>
+                                <p>Enhance your gaming experience with the new DualShock 4.</p>
+                                <a class="mack-btn" href="detail-page.html">Buy Now
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
+                                        <path fill-rule="evenodd"
+                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="https://png.pngitem.com/pimgs/s/565-5659807_playstation-4-controller-png-ps4-dualshock-controller-red.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End -->
+
+        <!-- Smart Phone start  -->
+        <section id="smartphone">
+            <div class="container">
+                <div class="smartphone-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1>SmartPhones</h1>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <h5>See All</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card text-center" style="width: 18rem; border:none;">
+                            <img src="https://png.pngitem.com/pimgs/s/145-1453180_iphone-11-pro-space-grey-hd-png-download.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>IPhone 11 pro</b></h5>
+                                <p class="card-text">The latest iPhone with an amazing camera.</p>
+                                <h5><b>$999</b></h5>
+                                <a href="detail-page.html" class="btn smartphone-btn">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center" style="width: 18rem; border:none;">
+                            <img src="https://png.pngitem.com/pimgs/s/508-5089110_samsung-aura-glow-galaxy-note-10-hd-png.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Samsung Galaxy Note10+</b></h5>
+                                <p class="card-text">A powerful smartphone for productivity.</p>
+                                <h5><b>$799</b></h5>
+                                <a href="detail-page.html" class="btn smartphone-btn">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center" style="width: 18rem; border:none;">
+                            <img src="https://png.pngitem.com/pimgs/s/580-5805301_google-pixel-2-google-pixel-2-price-google.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Google Pixel</b></h5>
+                                <p class="card-text">Experience pure Android on the Pixel.</p>
+                                <h5><b>$699</b></h5>
+                                <a href="detail-page.html" class="btn smartphone-btn">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End  -->
+
+        <!-- Laptop start  -->
+        <section id="laptop">
+            <div class="container">
+                <div class="laptop-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1>Laptop</h1>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <h5>See All</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card text-center" style="width: 18rem;border:none;">
+                            <img src="https://png.pngitem.com/pimgs/s/575-5752617_asus-vivobook-14-k403fa-hd-png-download.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Asus VivoBook</b></h5>
+                                <p class="card-text">Sleek design with powerful performance.</p>
+                                <h5><b>$999</b></h5>
+                                <a href="detail-page.html" class="btn laptop-btn">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center" style="width: 18rem;border:none;">
+                            <img src="https://png.pngitem.com/pimgs/s/247-2475845_acer-aspire-es1-511-intel-celeron-2gb-ram.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Acer</b></h5>
+                                <p class="card-text">Budget-friendly laptop for everyday use.</p>
+                                <h5><b>$2799</b></h5>
+                                <a href="detail-page.html" class="btn laptop-btn">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center" style="width: 18rem;border:none;">
+                            <img src="https://png.pngitem.com/pimgs/s/186-1860694_clipart-hand-reaching-out-of-computer-screen-for.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>HP Pavilion</b></h5>
+                                <p class="card-text">Powerful specs in a stylish package.</p>
+                                <h5><b>$999</b></h5>
+                                <a href="detail-page.html" class="btn laptop-btn">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End  -->
+
+        <!-- Categories Start -->
+        <section id="categories">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h1>Categories</h1>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-3 mt-5 mb-5">
+                        <div class="categories-card">
+                            <img src="https://cdn0.iconfinder.com/data/icons/freebies-2/24/shopping-bag-heart-128.png" alt="" class="img-fluid">
+                            <h2>Bag</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="categories-card mb-5">
+                            <img src="https://cdn3.iconfinder.com/data/icons/solid-amenities-icon-set/64/Beauty_Saloon_2-128.png" alt="" class="img-fluid">
+                            <h2>Beauty</h2>
+                        </div>
+                        <div class="categories-card mb-5">
+                            <img src="https://cdn3.iconfinder.com/data/icons/basketball-icons/484/Winged_Shoe-128.png" alt="" class="img-fluid">
+                            <h2>Shoes</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="https://cdn1.iconfinder.com/data/icons/scenes-1-2/1000/shopping___woman_female_person_shop_ecommerce_cart-512.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End -->
+
+        <!-- Footer start  -->
+        <footer>
+            <div class="text-center">
+                <strong>Muhammad Shahroze </strong> &copy; All Right reserved
+            </div>
+        </footer>
+        <!-- End  -->
+    </main>
+    
+</body>
+
+</html>
